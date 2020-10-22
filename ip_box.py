@@ -1,15 +1,10 @@
 #!/usr/bin/env python3
 
-#importing tkinter
-from tkinter import *
-#importing iptc for a more "elegant" code
+import tkinter as tk
 import iptc
-#imporing subprocess: allows you to spawn new processes, connect to input/output/error
-#pipes and obtain their return codes
 import subprocess
 
-#creating a window - create a variable - Tk = tkinter
-root = Tk()
+root = tk.Tk()
 
 #creating window title
 root.title("Burn Care")
