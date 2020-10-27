@@ -4,6 +4,17 @@ import tkinter as tk
 
 #FUNCTIONS
 def button_press():
+
+#on button press:
+	# clear all current iptables rules
+	# for every row: piece together the iptables command string and run os.system()
+		# how am i gonna detect how many rows there are?
+	# stop when there are no more rows
+
+# row_num = numer of rows
+# for i in range(row_num):
+		# do the above
+
     global row_of_boxes
     # Dictionary to save placements of input on interface for a single row
     row_of_boxes = {}
@@ -32,7 +43,11 @@ def button_press():
     rule['protocol']=chain_box.get()
     chain_box=row_of_boxes['accept_or_drop_entry']
     rule['accept_or_drop']=chain_box.get()
-    print(rule)
+#   print(rule)
+
+#    command = 'sudo iptables -A ' + rule['input_output_forward'] + ' -p ' + rule['protocol']
+#    os.system(command)
+# sudo iptables -A [in/out] -p [proto] -s [srcip] --sport [sport] -d [dstip] --dport [dport] -j [accept/drop]
 
 #GUI
 window = tk.Tk()
